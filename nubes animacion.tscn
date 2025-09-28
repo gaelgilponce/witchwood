@@ -1,0 +1,93 @@
+[gd_scene load_steps=11 format=3 uid="uid://cm8uqjw55q1la"]
+
+[ext_resource type="Texture2D" uid="uid://ccj4xiyygsv2u" path="res://nube gif.png" id="1_v4yqj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4yqj"]
+atlas = ExtResource("1_v4yqj")
+region = Rect2(0, 0, 1350, 405)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xigun"]
+atlas = ExtResource("1_v4yqj")
+region = Rect2(0, 405, 1350, 405)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4v7kd"]
+atlas = ExtResource("1_v4yqj")
+region = Rect2(0, 810, 1350, 405)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0patg"]
+atlas = ExtResource("1_v4yqj")
+region = Rect2(0, 1215, 1350, 405)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1abc"]
+atlas = ExtResource("1_v4yqj")
+region = Rect2(0, 1620, 1350, 405)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gm8lk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4yqj")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xigun")
+}],
+"loop": true,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4v7kd")
+}],
+"loop": true,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0patg")
+}],
+"loop": true,
+"name": &"4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1abc")
+}],
+"loop": true,
+"name": &"5",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_xigun"]
+resource_name = "1"
+length = 4.0
+loop_mode = 2
+
+[sub_resource type="Animation" id="Animation_4v7kd"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0patg"]
+_data = {
+&"1": SubResource("Animation_xigun"),
+&"RESET": SubResource("Animation_4v7kd")
+}
+
+[node name="Node2D" type="AnimatedSprite2D"]
+position = Vector2(449.0001, 170.00002)
+scale = Vector2(0.4345679, 0.4345679)
+sprite_frames = SubResource("SpriteFrames_gm8lk")
+animation = &"5"
+frame_progress = 0.41890445
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_0patg")
+}
+speed_scale = 2.688
