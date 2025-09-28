@@ -195,19 +195,19 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n8abk"]
-size = Vector2(96, 103)
+size = Vector2(83, 93)
 
 [node name="CHARACTER" type="CharacterBody2D"]
 script = ExtResource("1_n8abk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(167.875, 559.875)
-scale = Vector2(4.3046875, 4.3046875)
+position = Vector2(159, 568.75)
+scale = Vector2(3.7499998, 3.7499998)
 sprite_frames = SubResource("SpriteFrames_kx0ri")
 animation = &"Shoot"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(164, 577.5)
+position = Vector2(154.5, 583.5)
 shape = SubResource("RectangleShape2D_n8abk")
 
 [node name="Camera2D" type="Camera2D" parent="."]

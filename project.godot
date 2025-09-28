@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="hackathon"
-run/main_scene="uid://bauujr0pqaex7"
+run/main_scene="uid://v0uud7o7vjlv"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
 

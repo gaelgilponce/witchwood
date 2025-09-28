@@ -17,7 +17,7 @@ func _physics_process(_delta):
 func update_animation():
 	if not is_on_floor():
 		if velocity.y < 0:
-			animated_sprite.play("Jump")
+			animated_sprite.play("Up")
 		else:
 			animated_sprite.play("Fall")
 		return 
